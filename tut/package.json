@@ -27,7 +27,7 @@
     "start": "react-scripts start",
     "eject": "react-scripts eject",
     "dev": "webpack --config=Scripts/config/webpack.dev.js --watch",
-    "build": "react-scripts build",
+    "build": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "eslintConfig": {
