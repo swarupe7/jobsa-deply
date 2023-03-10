@@ -4,7 +4,7 @@ import axios from 'axios';
 const Dashboard = () => {
       const [datas,setDatas]=useState([]);
       useEffect(()=>{
-        axios.get('http://localhost:3050/allprofiles',{headers:{'x-token':localStorage.getItem('token')}}).then(res=>{setDatas(res.data);
+        axios.get('https://jobsa-deply.onrender.com/allprofiles',{headers:{'x-token':localStorage.getItem('token')}}).then(res=>{setDatas(res.data);
         console.log(res.data);
     });
        
