@@ -6,11 +6,11 @@ const Myprofile = () => {
     const [data,setData]=useState([]);
     const [review,setReview]=useState([]);
       useEffect(async()=>{
-        await axios.get('http://localhost:3050/myprofile',{headers:{'x-token':localStorage.getItem('token')}}).then(res=>{setData(res.data);
+        await axios.get('https://jobsa-deply.onrender.com/myprofile',{headers:{'x-token':localStorage.getItem('token')}}).then(res=>{setData(res.data);
         console.log(res.data);
     });//for reviews on me
       
-    await axios.get('http://localhost:3050/myreview',{headers:{'x-token':localStorage.getItem('token')}}).then(res=>{setReview(res.data.myreview);
+    await axios.get('https://jobsa-deply.onrender.com/myreview',{headers:{'x-token':localStorage.getItem('token')}}).then(res=>{setReview(res.data.myreview);
     console.log(res.data);
 });
 
