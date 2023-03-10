@@ -11,7 +11,7 @@ const Register = () => {
   const submitHandler=async(e)=>{
     e.preventDefault();
     console.log(data);
-    await axios.post('http://localhost:3050/register',data).then(res=>{console.log(res);alert('Registered Successfully')});
+    await axios.post('https://jobsa-deply.onrender.com/register',data).then(res=>{console.log(res);alert('Registered Successfully')});
 
 
   }
