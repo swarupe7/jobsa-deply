@@ -14,7 +14,7 @@ const Login = () => {
   const submitHandler=async (e)=>{
     e.preventDefault();
     console.log(data);
-    await axios.post('http://localhost:3050/login',data).then(res=>{localStorage.setItem('token',res.data.token);setAuth(true)});
+    await axios.post('https://jobsa-deply.onrender.com/login',data).then(res=>{localStorage.setItem('token',res.data.token);setAuth(true)});
 
   }
   if(auth){
