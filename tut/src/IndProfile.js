@@ -7,11 +7,11 @@ const IndProfile = ({match}) => {
     const [taskprovider,setTaskprovider]=useState(null);
     const submitHandler=async (e)=>{
         e.preventDefault();
-       await axios.get('https://jobsa-deply-15nb.vercel.app/myprofile',{headers:{'x-token':localStorage.getItem('token')}}).then(res=>{setTaskprovider(res.data.fullname)});
+       await axios.get('https://jobsa-deply.onrender.com/myprofile',{headers:{'x-token':localStorage.getItem('token')}}).then(res=>{setTaskprovider(res.data.fullname)});
 
        let review={taskprovider,taskworker:match.params.id,rating};
         
-        await axios.post('https://jobsa-deply-15nb.vercel.app/addreview',review,{headers:{'x-token':localStorage.getItem('token')}}).then(res=>{alert('rating was submitted')});
+        await axios.post('https://jobsa-deply.onrender.com/addreview',review,{headers:{'x-token':localStorage.getItem('token')}}).then(res=>{alert('rating was submitted')});
     
       }
   return (
